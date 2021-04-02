@@ -1,0 +1,42 @@
+.col {
+  padding: 40px;
+}
+
+.sedan {
+  background: $orange;
+  border-radius: 8px 8px 0px 0px;
+  & .btn {
+    color: $orange;
+  }
+}
+
+.suv {
+  background-color: $cyan;
+  & .btn {
+    color: $cyan;
+  }
+}
+
+.luxury {
+  background-color: $darkCyan;
+  border-radius: 0px 0px 8px 8px;
+  & .btn {
+    color: $darkCyan;
+  }
+}
+
+.btn {
+  background-color: $white;
+  width: 70%;
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  color: black;
+  border: 2px solid white;
+  transition: background-color 0.4s ease-in-out, color 0.6s ease-in-out;
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+}

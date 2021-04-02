@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  color: $white;
+}
+
+main {
+  width: 95%;
+  border-radius: 8px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+}
