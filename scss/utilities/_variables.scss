@@ -2,6 +2,7 @@
 
 $white: #fff;
 $black: #000;
+$pText: rgba(255, 255, 255, 0.6);
 
 $orange: hsl(31, 77%, 52%);
 $cyan: hsl(184, 100%, 22%);
@@ -14,7 +15,7 @@ $lightgray: hsl(0, 0%, 95%);
 
 // Media Breakpoints
 
-$break-m: 768px;
+$break-m: 868px;
 $break-l: 1024px;
 
 $max-width: 1200px;

@@ -6,13 +6,30 @@ body {
   font-size: 1em;
   font-family: "Lexend Deca";
   font-weight: 400;
-  color: $white;
 }
 
 main {
-  width: 95%;
+  width: 90%;
+  max-width: 1000px;
   border-radius: 8px;
   margin: 40px auto;
-  display: flex;
-  flex-direction: column;
+  @include flex($dir: column);
+  @include medq($break-m) {
+    @include flex($dir: row);
+  }
+}
+
+.attribution {
+  @include flex($dir: column, $align: center);
+  & a {
+    text-decoration: none;
+    color: lighten($cyan, 10%);
+    transition: color 0.4s ease-in-out;
+    &:hover {
+      color: $darkCyan;
+    }
+  }
+  @include medq($break-m) {
+    @include flex($dir: row, $just: center);
+  }
 }

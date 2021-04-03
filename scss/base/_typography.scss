@@ -1,9 +1,15 @@
 h1 {
   font-family: "Big Shoulders Display";
   font-weight: 700;
-  margin-bottom: 40px;
+  color: $white;
 }
 
-p {
+p:not(.foot) {
   line-height: 2em;
+  color: $pText;
+  min-height: 220px;
+}
+
+.foot {
+  margin: 0px 10px;
 }

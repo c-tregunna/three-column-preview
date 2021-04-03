@@ -1,10 +1,14 @@
 .col {
   padding: 40px;
+  @include flex($dir: column, $just: space-between);
 }
 
 .sedan {
   background: $orange;
   border-radius: 8px 8px 0px 0px;
+  @include medq($break-m) {
+    border-radius: 8px 0px 0px 8px;
+  }
   & .btn {
     color: $orange;
   }
@@ -20,6 +24,9 @@
 .luxury {
   background-color: $darkCyan;
   border-radius: 0px 0px 8px 8px;
+  @include medq($break-m) {
+    border-radius: 0px 8px 8px 0px;
+  }
   & .btn {
     color: $darkCyan;
   }
@@ -28,13 +35,15 @@
 .btn {
   background-color: $white;
   width: 70%;
-  max-width: 250px;
   padding: 20px;
   border-radius: 50px;
   text-align: center;
   color: black;
   border: 2px solid white;
   transition: background-color 0.4s ease-in-out, color 0.6s ease-in-out;
+  @include medq($break-m) {
+    width: 90%;
+  }
   &:hover {
     background-color: transparent;
     color: white;

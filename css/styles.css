@@ -417,34 +417,75 @@ body {
   font-size: 1em;
   font-family: "Lexend Deca";
   font-weight: 400;
-  color: #fff;
 }
 
 main {
-  width: 95%;
+  width: 90%;
+  max-width: 1000px;
   border-radius: 8px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 868px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: #0098a3;
+  transition: color 0.4s ease-in-out;
+}
+.attribution a:hover {
+  color: #004241;
+}
+@media (min-width: 868px) {
+  .attribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 h1 {
   font-family: "Big Shoulders Display";
   font-weight: 700;
-  margin-bottom: 40px;
+  color: #fff;
 }
 
-p {
+p:not(.foot) {
   line-height: 2em;
+  color: rgba(255, 255, 255, 0.6);
+  min-height: 220px;
+}
+
+.foot {
+  margin: 0px 10px;
 }
 
 .col {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sedan {
   background: #e38826;
   border-radius: 8px 8px 0px 0px;
+}
+@media (min-width: 868px) {
+  .sedan {
+    border-radius: 8px 0px 0px 8px;
+  }
 }
 .sedan .btn {
   color: #e38826;
@@ -461,6 +502,11 @@ p {
   background-color: #004241;
   border-radius: 0px 0px 8px 8px;
 }
+@media (min-width: 868px) {
+  .luxury {
+    border-radius: 0px 8px 8px 0px;
+  }
+}
 .luxury .btn {
   color: #004241;
 }
@@ -468,13 +514,17 @@ p {
 .btn {
   background-color: #fff;
   width: 70%;
-  max-width: 250px;
   padding: 20px;
   border-radius: 50px;
   text-align: center;
   color: black;
   border: 2px solid white;
   transition: background-color 0.4s ease-in-out, color 0.6s ease-in-out;
+}
+@media (min-width: 868px) {
+  .btn {
+    width: 90%;
+  }
 }
 .btn:hover {
   background-color: transparent;
